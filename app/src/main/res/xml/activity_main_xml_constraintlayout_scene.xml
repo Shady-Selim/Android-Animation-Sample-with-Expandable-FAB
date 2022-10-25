@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/animationContainer" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent"  android:layout_width="10dp" android:layout_height="10dp"
+            android:id="@+id/animationContainer"/>
+        <Constraint motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent" android:layout_width="10dp" android:layout_height="10dp"
+            android:rotation="-171" android:id="@+id/fab1"/>
+        <Constraint motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent" android:layout_width="10dp" android:layout_height="10dp" android:id="@+id/fab2"/>
+        <Constraint
+            android:id="@+id/fab3"
+            motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent" android:layout_width="10dp" android:layout_height="10dp"
+            android:rotation="171"  />
+        <Constraint
+            android:id="@+id/fab4"
+            android:rotation="-171" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent" android:layout_width="10dp" android:layout_height="10dp" />
+        <Constraint
+            android:id="@+id/fab5"
+            android:rotation="171" motion:layout_constraintStart_toStartOf="parent" motion:layout_constraintEnd_toEndOf="parent" motion:layout_constraintBottom_toBottomOf="parent" android:layout_width="10dp" android:layout_height="10dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>

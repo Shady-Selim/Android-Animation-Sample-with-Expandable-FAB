@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TestExtendedFab.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.TestExtendedFab.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+   <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/cardview_dark_background"
+       app:fabAlignmentMode="center"
+       app:fabCradleVerticalOffset="0dp"
+       app:fabCradleMargin="15dp"
+        app:fabCradleRoundedCornerRadius="40dp" >
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:id="@+id/bottomNavigation"
+           android:layout_width="match_parent"
+           android:layout_height="55dp"
+           app:backgroundTint="@android:color/transparent"
+           app:elevation="0dp"
+           android:padding="0dp"
+           app:itemIconTint="@android:color/white"
+           app:itemTextColor="@android:color/white"
+           app:menu="@menu/menu_activity_home_bottom_navigation" />
+   </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:elevation="12dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:srcCompat="@drawable/selector_fab" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        app:layoutDescription="@xml/activity_main_xml_constraintlayout_scene"
+        android:layout_marginBottom="90dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/animationContainer"
+            android:layout_height="300dp"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="30dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+            android:text="fab1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="30dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+            android:drawableTop="@android:drawable/btn_star_big_on"
+            android:text="fab2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="30dp"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:text="fab3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="80dp"
+            android:drawableTop="@android:drawable/ic_dialog_email"
+            android:text="fab4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab5"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="80dp"
+            android:drawableTop="@android:drawable/ic_dialog_map"
+            android:text="fab5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
